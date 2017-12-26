@@ -1,0 +1,87 @@
+html,body{
+	height: 100%;
+}
+
+.login_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #4c4d4e url(../img/login.jpg) center center/cover no-repeat;
+	.logo{
+		width: .9rem;
+		height: 1.16rem;
+		margin: .8rem auto 1.1rem;
+		img{
+			width: 100%;
+		}
+	}
+	.content{
+		width: 100%;
+		padding: 0 .36rem;
+		.public{
+			width: 100%;
+			height: .44rem;
+			border-radius: .03rem;
+			background: #fff;
+			margin: .12rem 0;
+			font-size: .15rem;
+			&.code_box{
+				position: relative;
+			}
+			.icon{
+				width: .43rem;
+				height: 100%;
+				float: left;
+				padding: .15rem .14rem .15rem .18rem;
+				img{
+					width: 100%;
+				}
+			}
+			input{
+				width: 2.6rem;
+				height: 100%;
+				display: block;
+				float: left;
+				border: 0;
+				outline: none;
+				background: transparent;
+				color: #969696;
+					&::-webkit-input-placeholder { /* WebKit browsers */
+						color: #969696;
+					}
+					&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+						color: #969696;
+					}
+					&::-moz-placeholder { /* Mozilla Firefox 19+ */
+						color: #969696;
+					}
+					&:-ms-input-placeholder { /* Internet Explorer 10+ */
+						color: #969696;
+					}
+			}
+			.vcode{
+				width: .7rem;
+				height: .2rem;
+				border: 1px solid #f62b2b;
+				border-radius: .02rem;
+				position: absolute;
+				top: .12rem;
+				right: .1rem;
+				.vcode_btn{
+					width: 100%;
+					height: 100%;
+					font-size: .1rem;
+					color: #f62b2b;
+					text-align: center;
+					line-height: .2rem;
+				}
+			}
+		}
+		.login{
+			background: #f62b2b;
+			text-align: center;
+			line-height: .44rem;
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>窝友公寓</title>
+	<link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/common/base.css">
+	<link rel="stylesheet" href="./css/order_submit.css">
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+</head>
+<script src="./js/common/rem.js"></script>
+<body>
+	<div class="home_info">
+		<!-- banner + 公寓展示 -->
+		<div class="banner_box">
+			<div class="swiper-container" id="swiper1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./img/type_sygj11.png" alt=""></div>
+					<div class="swiper-slide"><img src="./img/type_sygj12.png" alt=""></div>
+					<div class="swiper-slide"><img src="./img/type_sygj13.png" alt=""></div>
+					<div class="swiper-slide"><img src="./img/type_sygj14.png" alt=""></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="des">
+				<div class="address">
+					<span class="name">申悦国际店</span>
+					<span class="dot">·</span>
+					<span class="type">精致大床房</span>
+				</div>
+				<div class="info">
+					45㎡/大床1.8m <br>可做饭/有沙发/有wifi
+				</div>
+			</div>
+		</div>
+
+		<!-- 预订信息 -->
+		<div class="infomation">
+			<div class="time public">
+				<div class="title">入住时间</div>
+				<ul class="list">
+					<li class="item shallow">
+						<span>入住时间</span>
+						<div class="selec" id="into"><input type="text" class="time" id="start" placeholder="选择入住时间" disabled="disabled"></div>
+					</li>
+					<li class="item deep">
+						<span>退房时间</span>
+						<div class="selec" id="leave"><input type="text" class="time"  id="end" placeholder="选择离店时间" disabled="disabled"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="content public">
+				<div class="title">入住资料</div>
+				<ul class="list">
+					<li class="item shallow">
+						<span>房型名称</span>
+						<input type="text" id="type" placeholder="房型名称" disabled="disabled">
+					</li>
+					<li class="item deep">
+						<span>订单总额</span>
+						<input type="text" id="total" placeholder="订单总额" disabled="disabled">
+					</li>
+				</ul>
+				<ul class="list">
+					<li class="item shallow">
+						<span>入住人姓名</span>
+						<input type="text" class="name" id="mark" placeholder="请输入您的姓名">
+					</li>
+					<li class="item deep">
+						<span>手机</span>
+						<input type="number" class="phone" id="phone" placeholder="请输入您的电话" value="<%= user.phone%>" >
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 支付方式 -->
+		<div class="pay_type">
+			<label class="check_label wechat" for="h11" id="wechatpay">
+				<div class="icon wx_icon"></div>
+				<p class="des">微信支付</p>
+				<input type="radio" class="check_pay" checked="true" name="checkbox1" id="h11">
+			</label>
+			<label class="check_label" for="h12" id="alipay">
+				<div class="icon ali_icon"></div>
+				<p class="des">支付宝支付</p>
+				<input type="radio" class="check_pay" name="checkbox1" id="h12">
+			</label>
+
+			<div class="btn_support">提交订单</div>
+		</div>
+
+		<!-- 入住须知 -->
+		<div class="notes">
+			<div class="notes_inner">
+				<div class="title">入住须知</div>
+				<p>
+					申悦国际B座1019室 我们管家会接待您的喔。记得在进门大厅前台说是窝友公寓，前台会给10楼的电梯卡，然后上楼找管家，电梯卡退房时放房间就好，记得和管家打声招呼喔。
+				</p>
+				<p>
+					申悦国际B座1019室 我们管家会接待您的喔。记得在进门大厅前台说是窝友公寓，前台会给10楼的电梯卡，然后上楼找管家，电梯卡退房时放房间就好，记得和管家打声招呼喔。
+				</p>
+				<p>
+					申悦国际B座1019室 我们管家会接待您的喔。记得在进门大厅前台说是窝友公寓，前台会给10楼的电梯卡，然后上楼找管家，电梯卡退房时放房间就好，记得和管家打声招呼喔。
+				</p>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="logo">
+				<img src="./img/logo_footer.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="head">
+			<h1><span class="back">返回</span>选择日期 <span class="confirm" id="confirm">确定</span></h1>
+		</div>
+
+		<div class="priceInfo">
+			<ul class="list">
+				<li class="item">入住时间：<span id="startTime">--</span></li>
+				<li class="item">离店时间：<span id="endTime">--</span></li>
+				<li class="item">订单总额：<span id="total_fee"></span>&nbsp;元</li>
+				<li class="item">总共：<span id="total_day"></span>&nbsp;晚</li>
+			</ul>
+					
+		</div>
+
+		<div id="calendar"></div>
+  	</div>
+	<!-- 用户提示 -->
+	<div class="toast" id="toast">请选择入住时间</div>
+
+	<script src="./js/jqmobi.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script>
+        (function() {
+            calendarIns = new calendar.calendar( {
+                count: 6,
+                selectDate: '',
+                selectDateName: '',
+                minDate: new Date(),
+                maxDate: new Date( +new Date() + 200 * 86400000 ),
+                isShowHoliday: true,
+                isShowWeek: true
+            } );
+      
+            $.bind( calendarIns, 'afterSelectDate', function( event ) {
+                var date = event.date;
+                if (date == null) { return false; };
+                calendarIns.setSelectDate( date );
+            } );
+        })();
+    </script>
+	<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+	<script src="./js/order_submit.js"></script>
+	<script>
+		// 用户提示相关
+		var toast = $('#toast');
+		function tip(toast_note){
+	        toast.show();
+	        toast.text(toast_note);
+	        setTimeout(function(){
+	            toast.hide()
+	        },2000);
+	    }
+
+	    // 选择入住日期相关
+		var home_info = $('.home_info');
+		var wrap = $('.wrap');
+
+		function showDate() {
+			home_info.addClass('hide');
+			wrap.addClass('show');
+		}
+
+		function backHandle() {
+			home_info.removeClass('hide');
+			wrap.removeClass('show');
+		}
+
+		function hideDate() {
+			var start = $('.start').data('date');
+			var end = $('.end').data('date')
+			if ($('#startTime').text() == '--') {
+				return tip('请选择入住时间')
+			};
+			if ($('#endTime').text() == '--') {
+				return tip('请选择离店时间')
+			};
+			backHandle();
+			$('#start').val(start);
+			$('#end').val(end);
+			$('#day').val('共'+$('#total_day').text()+'晚');
+			$('#total').val($('#total_fee').text()+'元');
+		}
+
+		$('#into').on('click', showDate);
+		$('#leave').on('click', showDate);
+		$('.back').on('click', backHandle);
+		$('#confirm').on('click', hideDate);
+
+		function isWx(userAgent) {
+			return /\bMicroMessenger\b/.test(userAgent);
+		}
+		var iswx = isWx(navigator.userAgent)
+
+		var support = $('.btn_support');
+		var paytype;
+		function payHandle() {
+			var home = JSON.parse($(this).attr('data'));
+			var mark = $('#mark').val();
+			var phone = $('#phone').val();
+			var payId = $('.pay_type .check_pay:checked').attr('id');
+			var start = $('#start').val();
+			var end = $('#end').val();
+			var day = $('#total_day').text();
+			var total_fee = $('#total_fee').text();
+
+			if (start.length == 0) {
+				return tip('请选择入住时间');
+			}
+			if (end.length == 0) {
+				return tip('请选择离店时间');
+			}
+			if (mark.length == 0) {
+				return tip('请输入您的姓名');
+			}
+			if (!/^1(3|4|5|7|8)\d{9}$/.test(phone)) {
+				return tip('请输入正确的手机号');
+			}
+			if (payId === 'h11') {
+				if (iswx) {
+					paytype = 'wx';
+				} else {
+					return tip('请在微信支付');
+				}
+			} else if (payId === 'h12') {
+				paytype = 'ali';
+			}
+/*
+			var payUrl = '/order/create?hid=<%= hotels._id%>'+ '&phone=' + phone + '&homeid=<%=home._id %>' + '&mark=' + mark + '&start='+ start+'&end=' +end+ '&day=' +day+ '&total_fee=' + total_fee + '&paytype=' + paytype;
+
+			location.href = payUrl;*/
+		}
+		support.on('click', payHandle);
+
+		var label = $('.check_label');
+		label.on('click', function(){
+			var id = $('.pay_type .check_pay:checked').attr('id');
+			if (id == 'h11') {
+				$('#alipay').removeClass('ali');
+				$('#wechatpay').addClass('wechat')		
+			}
+			if (id == 'h12') {
+				$('#wechatpay').removeClass('wechat');
+				$('#alipay').addClass('ali');
+			}
+		})
+		
+		if (iswx) {
+			$("#h11").attr("checked","checked");
+			$('#alipay').removeClass('ali');
+			$('#wechatpay').addClass('wechat')	
+		} else {
+			$("#h12").attr("checked","checked");
+			$('#wechatpay').removeClass('wechat');
+			$('#alipay').addClass('ali');
+		}
+	</script>
+</body>
+</html>

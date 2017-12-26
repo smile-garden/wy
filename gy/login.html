@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>窝友公寓</title>
+	<link rel="stylesheet" href="./css/common/base.css">
+	<link rel="stylesheet" href="./css/login.css">
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+</head>
+<script src="./js/common/rem.js"></script>
+<body>
+	<div class="login_box">
+
+		<div class="logo">
+			<img src="img/logo_login.png" alt="">
+		</div>
+
+		<div class="content">
+
+			<div class="phone_box public">
+				<div class="icon">
+					<img src="img/phone.png" alt="">
+				</div>
+				<input type="tel" class="phone" id="phone" placeholder="请输入您的手机号" >
+			</div>
+
+			<div class="code_box public">
+				<div class="icon">
+					<img src="img/verify.png" alt="">
+				</div>
+				<input type="text" class="code" id="code" placeholder="动态验证码" >
+				<div class="vcode">
+					<div class="vcode_btn" id="hq_code" onclick="resetCode(this)">获取验证码</div>
+					<div class="vcode_btn" id="cx_code" style="display:none">60(s)</div>
+				</div>
+			</div>
+
+			<div class="login public" id="login">登录</div>
+		</div>
+	</div>
+
+  
+
+	<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script>
+		function resetCode(){
+			var hq_code = $('#hq_code');
+			var cx_code = $('#cx_code');
+			var phone = $('#phone').val();
+			if (!/^1(3|4|5|7|8)\d{9}$/.test(phone)) return alert('请输入正确的手机号');
+			cx_code.html('60(s)');
+			hq_code.hide();
+			cx_code.show();
+			var second = 60;
+			var timer = null;
+
+			$.ajax({
+				type: 'post',
+				url: '/sms/login',
+				data: {
+				    phone: phone
+				},
+				dataType: 'json',
+				success: function(data) {
+					if (data.success) {
+					    console.log('success');
+					} else {
+					    throw Error(data.errmsg);
+					}
+				}
+			})
+
+			timer = setInterval(function(){
+				second -= 1;
+				if(second >0 ){
+				cx_code.html(+second+'(s)');
+				}else{
+				clearInterval(timer);
+				hq_code.html('重新获取');
+				hq_code.show();
+				cx_code.hide();
+				};
+			},1000);
+		}
+
+		var $loginBtn = $('#login');
+		$loginBtn.click(function(){
+			var phone = $('#phone').val();
+			var code = $('#code').val();
+			if (!phone) return alert('请输入手机号');
+			if (!code) return alert('请输入验证码');
+			if (!/^1(3|4|5|7|8)\d{9}$/.test(phone)) return alert('请输入正确的手机号');
+
+			$.ajax({
+				type: 'post',
+				url: '/login',
+				data: {
+					phone: phone,
+					code: code
+				},
+				dataType: 'json',
+				success: function(data) {
+					if (data.success) {
+						location.href = document.referrer;
+					    console.log(document.referrer);
+					} else {
+					    throw Error(data.errmsg);
+					}
+				}
+			})
+
+		});
+	</script>
+</body>
+</html>

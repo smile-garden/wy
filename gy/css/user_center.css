@@ -1,0 +1,247 @@
+.header {
+  width: 100%;
+  height: 2.2rem;
+  background: url(../img/center_bg.png) center center/100% auto no-repeat;
+}
+
+.header .tool {
+  width: 100%;
+  height: .4rem;
+  padding: .15rem .18rem 0;
+}
+
+.header .tool .back {
+  width: .25rem;
+  height: .25rem;
+  background: url(../img/back.png) center center/100% auto no-repeat;
+  float: left;
+}
+
+.header .tool .login_out {
+  width: .6rem;
+  height: .25rem;
+  float: right;
+  line-height: .25rem;
+  text-align: center;
+  font-size: .1rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: .04rem;
+}
+
+.header .head_info {
+  width: 100%;
+  height: 1.6rem;
+}
+
+.header .head_info .head {
+  width: .9rem;
+  height: .9rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header .head_info .head img {
+  width: 100%;
+}
+
+.header .head_info .nickname {
+  width: 100%;
+  display: block;
+  padding-top: .06rem;
+  line-height: .3rem;
+  text-align: center;
+  font-size: .14rem;
+  color: #fff;
+}
+
+.header .head_info .slogan {
+  line-height: .14rem;
+  text-align: center;
+  color: #ccc;
+  font-size: .12rem;
+}
+
+.order_box {
+  width: 100%;
+}
+
+.order_box .condition {
+  width: 100%;
+  height: .5rem;
+  padding: .06rem 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.order_box .condition .list {
+  width: 100%;
+  height: 100%;
+}
+
+.order_box .condition .list .item {
+  width: 1.24rem;
+  height: 100%;
+  float: left;
+  line-height: .38rem;
+  text-align: center;
+  font-size: .12rem;
+  color: #959595;
+  border-right: 1px solid #ececec;
+}
+
+.order_box .condition .list .item:last-child {
+  border-right-width: 0;
+}
+
+.order_box .order {
+  width: 100%;
+}
+
+.order_box .order_list {
+  width: 100%;
+  padding: 0 .1rem;
+  margin-bottom: .6rem;
+  display: none;
+}
+
+.order_box .order_list > p {
+  font-size: .14rem;
+  text-align: center;
+  line-height: .8rem;
+  color: #aaa;
+}
+
+.order_box .order_list.show {
+  display: block;
+}
+
+.order_box .order_item {
+  width: 100%;
+  height: .8rem;
+  border-bottom: 1px solid #ececec;
+  padding: .15rem;
+}
+
+.order_box .order_item:last-child {
+  border-bottom-width: 0;
+}
+
+.order_box .order_item .img {
+  width: .5rem;
+  height: .5rem;
+  float: left;
+}
+
+.order_box .order_item .img img {
+  width: 100%;
+}
+
+.order_box .order_item .message {
+  width: 2.2rem;
+  height: 100%;
+  float: left;
+  padding-left: .1rem;
+}
+
+.order_box .order_item .message .name {
+  font-size: .14rem;
+  height: .25rem;
+  color: #111;
+  margin-top: -.02rem;
+}
+
+.order_box .order_item .message .time {
+  font-size: .1rem;
+  color: #bbb;
+}
+
+.order_box .order_item .message .total {
+  font-size: .1rem;
+  color: #bbb;
+}
+
+.order_box .order_item .status {
+  width: .5rem;
+  height: .22rem;
+  text-align: center;
+  line-height: .22rem;
+  font-size: .1rem;
+  color: #909090;
+  background: #e2e2e2;
+  border-radius: .02rem;
+  margin-top: .14rem;
+  float: right;
+}
+
+.order_box .order_item .status.complete {
+  color: #fff;
+  background: #4d4d4e;
+}
+
+.tabbar {
+  width: 100%;
+  height: .5rem;
+  padding: .1rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.tabbar .tabbar_item {
+  width: 50%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #545454;
+}
+
+.tabbar .tabbar_item:last-child {
+  border-right-width: 0;
+}
+
+.tabbar .tabbar_item .icon {
+  width: .14rem;
+  float: left;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin-left: .5rem;
+  margin-right: .1rem;
+}
+
+.tabbar .tabbar_item .icon_gy {
+  height: .13rem;
+  background-image: url(../img/home_no.png);
+  margin-top: .07rem;
+}
+
+.tabbar .tabbar_item .icon_user {
+  height: .15rem;
+  background-image: url(../img/user_no.png);
+  margin-top: .06rem;
+}
+
+.tabbar .tabbar_item p {
+  font-size: .13rem;
+  color: #808080;
+  float: left;
+  line-height: .3rem;
+}
+
+.tabbar .tabbar_item.gy_s .icon_gy {
+  background-image: url(../img/home_s.png);
+}
+
+.tabbar .tabbar_item.gy_s p {
+  color: #fff;
+}
+
+.tabbar .tabbar_item.user_s .icon_user {
+  background-image: url(../img/user_s.png);
+}
+
+.tabbar .tabbar_item.user_s p {
+  color: #fff;
+}
