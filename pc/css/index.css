@@ -1,0 +1,487 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'MyNewFont';
+  src: url("../font/KaiGenGothicCN-Light_8dd551f.woff");
+}
+
+.shade_top {
+  width: 100%;
+  height: 136px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6666;
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyouheader_bg.png) repeat-x;
+}
+
+.nav_box {
+  position: fixed;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 100000;
+}
+
+.nav_box .logo {
+  position: absolute;
+  left: 36px;
+  height: 100%;
+}
+
+.nav_box .logo img {
+  height: 100%;
+}
+
+.nav_box .nav_inner {
+  width: 500px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav_box .nav_inner .list {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_box .nav_inner .list .item {
+  width: 20%;
+  height: 100%;
+  float: left;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  opacity: .3;
+}
+
+.nav_box .nav_inner .list .item.active {
+  color: #fff;
+  opacity: 1;
+}
+
+.nav_box .add {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 36px;
+}
+
+.nav_box .add img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.nav_box .add .contact {
+  width: 180px;
+  height: 88px;
+  position: absolute;
+  left: -180px;
+  bottom: -88px;
+  display: none;
+}
+
+.nav_box .add .contact img {
+  width: 100%;
+}
+
+.nav_box .add:hover .contact {
+  display: block;
+}
+
+#swiper1 {
+  width: 100%;
+  height: 100%;
+}
+
+#swiper1 .swiper-wrapper {
+  height: 100%;
+}
+
+#swiper1 .slide1 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyoubanner1.jpg) center center no-repeat;
+}
+
+#swiper1 .slide2 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyoubanner2.jpg) center center no-repeat;
+}
+
+#swiper1 .slide3 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyoubanner3.jpg) center center no-repeat;
+}
+
+#swiper1 .slide4 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyoubanner4.jpg) center center no-repeat;
+}
+
+#swiper1 .slide5 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyoubanner5.jpg) center center no-repeat;
+}
+
+#swiper1 .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+#swiper1 .pagination {
+  position: absolute;
+  z-index: 20;
+  left: 36px;
+  top: 50%;
+  margin-top: -69px;
+}
+
+#swiper1 .swiper-pagination-switch {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #fff;
+  margin: 16px 1px;
+  opacity: 0.3;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+#swiper1 .swiper-active-switch {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  opacity: 1;
+  margin: 16px 0;
+}
+
+.slide1 .slogen {
+  width: 300px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  margin-top: -60px;
+}
+
+.slide1 .slogen .ch {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  font-size: 40px;
+  color: #fff;
+  line-height: 50px;
+}
+
+.slide1 .slogen .ch p {
+  font-family: MyNewFont;
+}
+
+.slide1 .slogen .ch p span {
+  font-weight: 100;
+}
+
+.slide1 .slogen .ch span {
+  font-weight: 500;
+}
+
+.slide1 .slogen .en {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.slide1 .slogen .en p {
+  line-height: 20px;
+  text-align: right;
+  opacity: 0.5;
+}
+
+.slide2 .apartment {
+  width: 700px;
+  height: 80px;
+  position: absolute;
+  left: 36px;
+  bottom: 36px;
+  z-index: 5000;
+}
+
+.slide2 .apartment .slogen {
+  width: 194px;
+  height: 100%;
+  float: left;
+  font-size: 32px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.slide2 .apartment .slogen p {
+  font-family: MyNewFont;
+}
+
+.slide2 .apartment .slogen p span {
+  font-weight: 100;
+}
+
+.slide2 .apartment .line {
+  width: 70px;
+  height: 100%;
+  float: left;
+  padding: 24px 34px;
+}
+
+.slide2 .apartment .line span {
+  width: 1px;
+  height: 32px;
+  display: block;
+  background: #fff;
+}
+
+.slide2 .apartment .info {
+  width: 420px;
+  height: 100%;
+  float: left;
+}
+
+.slide2 .apartment .info p {
+  text-indent: 28px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  opacity: .5;
+  text-align: justify;
+}
+
+.slide2 .next {
+  width: 100px;
+  height: 32px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 36px;
+  bottom: 60px;
+  z-index: 5000;
+}
+
+.slide2 .next:hover {
+  background: #fff;
+  color: #000;
+}
+
+#swiper2 {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  line-height: 500px;
+  text-align: center;
+}
+
+#swiper2 .apart1 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyouapart1.jpg) center center no-repeat;
+}
+
+#swiper2 .apart2 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyouapart2.jpg) center center no-repeat;
+}
+
+#swiper2 .apart3 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyouapart3.jpg) center center no-repeat;
+}
+
+#swiper2 .apart4 {
+  background: url(http://okzrsonhm.bkt.clouddn.com/newwoyouapart4.jpg) center center no-repeat;
+}
+
+#swiper2 .swiper-slide {
+  background-size: cover;
+}
+
+.slide3 .zhongchou {
+  width: 420px;
+  height: 232px;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  margin-top: -100px;
+}
+
+.slide3 .zhongchou .slogen {
+  width: 100%;
+  height: 100px;
+  line-height: 50px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.slide3 .zhongchou .slogen p {
+  font-family: MyNewFont;
+}
+
+.slide3 .zhongchou .info {
+  width: 100%;
+  height: 132px;
+  padding-top: 32px;
+}
+
+.slide3 .zhongchou .info p {
+  font-size: 14px;
+  color: #fff;
+  opacity: .5;
+  line-height: 20px;
+}
+
+.slide4 .module {
+  width: 400px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  margin-top: -60px;
+}
+
+.slide4 .module .web {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  line-height: 50px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.slide4 .module .web p {
+  font-family: MyNewFont;
+}
+
+.slide4 .module .web p span {
+  font-weight: 100;
+}
+
+.slide4 .module .web span {
+  font-weight: 500;
+}
+
+.slide4 .module .button {
+  width: 120px;
+  height: 60px;
+  float: right;
+  padding-top: 24px;
+}
+
+.slide4 .module .button a {
+  display: block;
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  line-height: 34px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+}
+
+.slide4 .module .button a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.slide5 .about {
+  width: 504px;
+  height: 410px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -170px;
+  margin-left: -252px;
+}
+
+.slide5 .about .about_inner {
+  width: 100%;
+  height: 100%;
+}
+
+.slide5 .about .about_inner .title {
+  width: 100%;
+  height: 40px;
+  font-size: 32px;
+  font-family: MyNewFont;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+}
+
+.slide5 .about .about_inner .profile {
+  width: 100%;
+  height: 170px;
+  padding: 30px 34px 60px;
+}
+
+.slide5 .about .about_inner .profile p {
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  text-align: justify;
+  font-size: 14px;
+  color: #828384;
+  text-indent: 28px;
+}
+
+.slide5 .about .team_box {
+  width: 100%;
+  height: 200px;
+}
+
+.slide5 .about .team_box .list {
+  width: 100%;
+  height: 100%;
+}
+
+.slide5 .about .item {
+  width: 128px;
+  height: 100%;
+  float: left;
+  margin: 0 20px;
+}
+
+.slide5 .about .item .head {
+  width: 128px;
+  height: 100px;
+  padding: 0 14px;
+}
+
+.slide5 .about .item .head img {
+  width: 100%;
+}
+
+.slide5 .about .item p {
+  width: 100%;
+  height: 60px;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.slide5 .about .item .info {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: #828384;
+}
+
+.slide5 .about .item .info span {
+  display: block;
+}

@@ -1,0 +1,23 @@
+body, ul, ol, dl, h1, h2, h3, h4, h5, h6, p, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+*{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}

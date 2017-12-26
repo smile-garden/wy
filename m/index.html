@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>窝友-房屋运营服务提供商</title>
+	<meta name="keywords" content="窝友，宅系，公寓，众筹，租房" >
+	<meta name="description" content="杭州窝友科技有限公司成立于2017年3月，是一家新兴的互联网科技公司。公司将围绕‘住’开发一系列的创新产品，颠覆传统的租房、二手房模式，解决行业的多个痛点、提升房屋品质，为认真生活的人另辟新天地！">
+	<link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script>
+	    !function(win) {
+	        function resize() {
+	            var domWidth = domEle.getBoundingClientRect().width;
+	            if(domWidth / v > 540){
+	                domWidth = 540 * v;
+	            }
+	            win.rem = domWidth / 3.75;
+	            domEle.style.fontSize = win.rem + "px";
+	        }
+	        var v, initial_scale, timeCode, dom = win.document, domEle = dom.documentElement, viewport = dom.querySelector('meta[name="viewport"]'), flexible = dom.querySelector('meta[name="flexible"]');
+	        if (viewport) {
+	            var o = viewport.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/);
+	            if(o){
+	                initial_scale = parseFloat(o[2]);
+	                v = parseInt(1 / initial_scale);
+	            }
+	        } else if(flexible) {
+	            var o = flexible.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/);
+	            if (o) {
+	                v = parseFloat(o[2]);
+	                initial_scale = parseFloat((1 / v).toFixed(2))
+	            }
+	        }
+	        if (!v && !initial_scale) {
+	            var n = (win.navigator.appVersion.match(/android/gi),
+	                    win.navigator.appVersion.match(/iphone/gi));
+	            v = win.devicePixelRatio;
+	            v = n ? v >= 3 ? 3 : v >= 2 ? 2 : 1 : 1,initial_scale = 1 / v
+	        }
+	        //没有viewport标签的情况下
+	        if (domEle.setAttribute("data-dpr", v), !viewport) {
+	            if (viewport = dom.createElement("meta"), viewport.setAttribute("name", "viewport"), viewport.setAttribute("content", "initial-scale=" + initial_scale + ", maximum-scale=" + initial_scale + ", minimum-scale=" + initial_scale + ", user-scalable=no"), domEle.firstElementChild) {
+	                domEle.firstElementChild.appendChild(viewport)
+	            } else {
+	                var m = dom.createElement("div");
+	                m.appendChild(viewport), dom.write(m.innerHTML)
+	            }
+	        }
+	        win.dpr = v;
+	        win.addEventListener("resize", function() {
+	            clearTimeout(timeCode), timeCode = setTimeout(resize, 300)
+	        }, false);
+	        win.addEventListener("pageshow", function(b) {
+	            b.persisted && (clearTimeout(timeCode), timeCode = setTimeout(resize, 300))
+	        }, false);
+	        resize();
+	    }(window);
+	</script>
+</head>
+<body>
+	<!-- 导航 -->
+	<div class="nav_box">
+		<div class="nav_inner">
+			<div class="logo"></div>
+			<div class="line"></div>
+			<div class="menu_btn">
+	            <i></i>
+	            <i></i>
+	            <i></i>
+	        </div>
+		</div>
+	</div>
+	<!-- 指示 -->
+	<div class="down">
+		<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyoudown.png" alt="">
+	</div>
+	<div class="swiper-container" id="swiper1">
+		<div class="swiper-wrapper">
+			<!-- 首页 -->
+			<div class="swiper-slide slide1">
+				<div class="slogen">
+					<div class="ch ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+						<p>首个房<span>屋</span>运营</p>
+						<span>服务提供商</span>
+					</div>
+					<div class="line ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+						<span></span>
+					</div>
+					<div class="en ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+						<p>First housing operation</p>
+						<p>Service provider</p>
+					</div>
+				</div>
+			</div>
+			<!-- 公寓 -->
+			<div class="swiper-slide slide2">
+				<div class="title ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+					<p >出差不必漂<span>泊</span></p>
+					<span>到窝友便是家</span>
+				</div>
+				<div class="info ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+					<p>
+						酒店再高级还是少了点人情味儿，便捷旅社一实惠品质就跟不上。在这边会有窝小哥、窝小妹和您打成一片，即使是陌生的城市也会有人等您回家。简洁不失情调的宜家风装饰，干净舒适的床品让你每
+					</p>
+					<p class="center">夜都好眠。</p>
+				</div>
+			</div>
+			<!-- 众筹 -->
+			<div class="swiper-slide slide3">
+				<div class="zhongchou">
+					<div class="title ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+						<p>窝友公寓</p>
+						<span>爱众筹项目</span>
+					</div>
+					<div class="line ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+						<span></span>
+					</div>
+					<div class="info ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+						<p class="center">我们是在做有关梦想的事！</p>
+						<p>
+							许多人都有闲置资金，并没有很大数目。单个人的单笔资金也许干不成什么事，但是如果数以千万计的小额资金汇聚起来，可以帮助有梦想、有想法的人去创造事业，实现梦想，最终每个人的小额资金
+						</p>
+						<p class="center">都发挥了最大的价值。</p>
+					</div>
+					<a href="http://izhongchou.top" class="zc_button ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s"> 
+						<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouzc_button.png" alt="">
+					</a>
+				</div>
+			</div>
+			<!-- 宅系 -->
+			<div class="swiper-slide slide4">
+				<div class="zhaixi">
+					<div class="zx_logo ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouzx_logo.png" alt="">
+					</div>
+					<div class="title ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+						<p >让兴趣</p>
+						<span>宅出价值</span>
+					</div>
+					<a href="https://izhaixi.top" class="zx_button ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+						<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouzx_button.png" alt="">
+					</a>
+				</div>
+			</div>
+			<!-- 关于 -->
+			<div class="swiper-slide slide5">
+				<div class="about_box">
+					<div class="about_inner">
+						<div class="profile">
+							<div class="title ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s"><span>关于</span>窝友</div>
+							<div class="info ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+								<p>
+									杭州窝友科技有限公司成立于2017年3月，是一家新兴的互联网科技公司。公司将围绕‘住’开发一系列的创新产品，颠覆传统的租房、二手房模式，解决行业的多个痛点、提升房屋品质，为认真生活的人
+								</p>
+								<p class="center">另辟新天地！</p>
+							</div>
+						</div>
+						<div class="team_box ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+							<ul class="list">
+								<li class="item">
+									<div class="head ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+										<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouteam1.png" alt="">
+									</div>
+									<p>陈星&nbsp;/&nbsp;CEO</p>
+									<div class="info">
+										<span>连续创业者</span>
+										<span>前阿里技术主管</span>
+									</div>
+								</li>
+								<li class="item mar_7">
+									<div class="head ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+										<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouteam2.png" alt="">
+									</div>
+									<p>朱明建&nbsp;/&nbsp;COO</p>
+									<div class="info">
+										<span>连续创业者</span>
+										<span>5年酒店管理经验</span>
+									</div>
+								</li>
+								<li class="item">
+									<div class="head ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+										<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouteam3.png" alt="">
+									</div>
+									<p>胡丕顶&nbsp;/&nbsp;CFO</p>
+									<div class="info">
+										<span>浙江大学EMBA</span>
+										<span>多年房产投资经验</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="contact_box ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+							<div class="contact">
+								<div class="title">
+									<span>联系</span>我们
+								</div>
+								<div class="address">
+									<p>浙江<span>·</span>杭州</p>
+									<p>西溪路525号</p>
+									<p>浙大科技园A东221</p>
+								</div>
+							</div>
+							<div class="phone">
+								<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouphone.png" alt="">
+							</div>
+							<div class="erweima">
+								<img src="http://okzrsonhm.bkt.clouddn.com/mnewwoyouerweima.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="mask" class="stop-swiping"></div>
+		<div class="swiper-pagination stop-swiping" id="pagination1"></div>
+	</div>
+
+	<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="https://wx.iwoyou.top/javascripts/mqjsapi.js"></script>
+	<script>
+		WX_SHARE({
+		  title: '窝友',  // 分享标题
+		  desc: '房屋运营服务提供商',   // 分享描述
+		  link: location.href,   // 分享链接
+		  imgUrl: 'http://okzrsonhm.bkt.clouddn.com/mnewwoyouwykj.png', // 分享图标
+		});
+	</script>
+</body>
+</html>
